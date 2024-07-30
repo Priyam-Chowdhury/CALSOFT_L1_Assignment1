@@ -2,7 +2,7 @@ pipeline {
     agent any
  
     environment {
-        GIT_REPO = 'https://github.com/Priyam-Chowdhury/Max_num_python.git'
+        GIT_REPO = 'https://github.com/Priyam-Chowdhury/CALSOFT_L1_Assignment1.git'
         GIT_BRANCH = 'main'
         PYTHON_FILE = 'max.py'
         DOCKER_IMAGE = 'python:3.9.19-slim-bullseye'
