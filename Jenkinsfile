@@ -2,9 +2,9 @@ pipeline {
     agent any
  
     environment {
-        GIT_REPO = 'https://github.com/Priyam-Chowdhury/CALSOFT_L1_Assignment1.git'
+        GIT_REPO = 'https://github.com/Priyam-Chowdhury/Jenkins_test.git'
         GIT_BRANCH = 'main'
-        PYTHON_FILE = 'max.py'
+        PYTHON_FILE = 'test.py'
         DOCKER_IMAGE = 'python:3.9.19-slim-bullseye'
     }
  
@@ -21,7 +21,7 @@ pipeline {
                     sh "docker pull ${DOCKER_IMAGE}"
  
                     // Run the Docker container and execute the Python script
-                    sh "docker run -v \$(pwd):/usr/src/app -w /usr/src/app ${DOCKER_IMAGE} python ${PYTHON_FILE}"
+                    sh "docker run -v \$(pwd)/Jenkins_test:/usr/src/app -w /usr/src/app ${DOCKER_IMAGE} python ${PYTHON_FILE}"
             }
         }
     }
